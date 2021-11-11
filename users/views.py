@@ -4,6 +4,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
 
 # Create your views here.
+def home(*args, **kwargs):
+    return HttpResponse("<h1>hello baby</h1>")
 def register(request):
 
      if request.method == 'POST':
