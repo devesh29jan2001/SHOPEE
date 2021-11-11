@@ -1,0 +1,13 @@
+hello {{name}}.
+
+
+
+<form action ="{% url 'logout' %}" method="post">
+
+    {% csrf_token %}
+    <button type="submit" value="Logout">
+       LOGOUT
+    </button>
+
+</form>
+

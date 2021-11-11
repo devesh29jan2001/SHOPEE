@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import logout as logoutsgit
 
 # Create your views here.
 def home(*args, **kwargs):
@@ -34,6 +35,12 @@ def login(request):
         form = AuthenticationForm ()
 
     return render (request,'users/login.html',{'form': form})
+
+def logout(request):
+    
+    if request.method == 'POST':
+         logouts (request)
+         return redirect('home')
 
    
     
